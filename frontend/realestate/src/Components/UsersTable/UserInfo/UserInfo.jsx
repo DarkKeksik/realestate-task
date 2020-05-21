@@ -2,11 +2,15 @@ import React from "react";
 import classes from "./UserInfo.module.css";
 
 
-let UserInfo = () => {
+let UserInfo = ( props ) => {
     return (
-        <a href="#test" className={ classes.user }>
-            <div className={ classes.user__info }>Тестович Тестовый Тест</div>
-            <div className={ classes.user__info }>89172635123</div>
+        <a
+            href={`#${props.id}`}
+            className={ classes.user }
+            onClick={props.modalOpenFunc}
+        >
+            <div className={ classes.user__info }> { props.fullname || "-" } </div>
+            <div className={ classes.user__info }> { props.phone || "-" } </div>
         </a>
     );
 }
