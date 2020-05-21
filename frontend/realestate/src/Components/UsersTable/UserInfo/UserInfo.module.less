@@ -1,0 +1,30 @@
+@table-bg-1: #e3e3e3;
+@table-bg-2: #d9d8e6;
+@table-font-color: #636363;
+@time-animation: .3s;
+
+
+.user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  background: @table-bg-1;
+  transition-duration: @time-animation;
+
+  &:nth-child(2n + 1) { background: @table-bg-2; }
+  &:hover { background: #c5c2e7; }
+  &__info {
+    padding: .75rem .375rem;
+    text-align: center;
+    color: @table-font-color;
+
+  }
+
+
+  // IE
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr;
+
+  &__info:first-of-type { -ms-grid-column: 1; }
+  &__info:last-of-type { -ms-grid-column: 2; }
+}

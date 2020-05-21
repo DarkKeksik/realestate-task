@@ -1,0 +1,54 @@
+// Общие классы для приложения
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; }
+a { text-decoration: none; }
+
+.font-Roboto { font-family: 'Roboto', sans-serif; }
+.margin-auto { margin: 0 auto; }
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+.wrap {
+  &-1024 { max-width: 64rem; .margin-auto; .w-100; }
+  &-1200 { max-width: 75rem; .margin-auto; .w-100; }
+}
+
+.bg-grad {
+    background-image: linear-gradient(to top right,
+      rgb(101, 115, 255), rgb(111, 114, 247), rgb(120, 114, 239),
+      rgb(130, 113, 231), rgb(139, 112, 223), rgb(149, 111, 215),
+      rgb(158, 111, 208), rgb(168, 110, 200), rgb(177, 109, 192),
+      rgb(187, 108, 184), rgb(196, 108, 176), rgb(206, 107, 168));
+  }
+
+.height {
+  &-min-100vh {
+    min-height: 100vh;
+
+    // IE
+    height: 1px;
+  }
+}
+
+.flex {
+  &-c-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  height: 1px;
+
+  &__flexWrap {
+    padding: 1.25rem 0;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  .font-Roboto;
+  .bg-grad;
+}
