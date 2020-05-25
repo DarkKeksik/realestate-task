@@ -1,0 +1,51 @@
+const webpack = require('webpack');
+
+module.exports = {
+    entry: './src/index.js',
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            modules: true
+                        }
+                    }
+                ],
+                include: /\.module\.css$/
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ],
+                exclude: /\.module\.css$/
+            }
+        ]
+    },
+    resolve: {
+        extensions: ['*', '.js', '.jsx']
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    },
+    output: {
+        path: __dirname + '/dist',
+        publicPath: '/',
+        filename: 'bundle.js'
+    }
+};
