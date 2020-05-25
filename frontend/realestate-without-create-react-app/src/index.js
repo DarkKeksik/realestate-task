@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from "./Components/App";
+import { BrowserRouter } from "react-router-dom";
 
 import { createStore } from 'redux';
 import { connect, Provider } from "react-redux";
 
 // Начальное состояние
 const initialState = {
-    id1: { fullname: "Марионов Андрей Владимирович", phone: "89027137293" },
-    id2: { fullname: "Михайлков Алексей Родионов", phone: "89312412512" },
-    id3: { fullname: "Ситникова Анна Сергеевна", phone: "89734812511" }
+    1: { fullname: "Марионов Андрей Владимирович", phone: "89027137293" },
+    2: { fullname: "Михайлков Алексей Родионов", phone: "89312412512" },
+    3: { fullname: "Ситникова Анна Сергеевна", phone: "89734812511" }
 }
 
 // События смены состояния
