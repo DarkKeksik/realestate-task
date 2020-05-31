@@ -10,6 +10,9 @@ import { NavLink } from "react-router-dom";
 
 
 let AboutUser = ( props ) => {
+
+    console.log(props);
+
     return (
         <div className={ classes.AboutUser }>
             <div className={ classes.AboutUser__title }>
@@ -36,9 +39,9 @@ let AboutUser = ( props ) => {
                 </InputGroup>
             </div>
             <div className={ classes.AboutUser__panel }>
-                <Button variant="outline-success" size="lg">
+                <Button className="mr-2" variant="outline-success" size="lg">
                     Сохранить
-                </Button>{' '}
+                </Button>
                 <NavLink
                     className="btn btn-outline-dark btn-lg"
                     to="../"

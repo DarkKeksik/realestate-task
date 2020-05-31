@@ -1,5 +1,5 @@
 import React from 'react';
-import UsersTable from "./Components/UsersTable/UsersTable";
+import UsersTable from "./components/UsersTable/UsersTable";
 import './styles/general.css';
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
