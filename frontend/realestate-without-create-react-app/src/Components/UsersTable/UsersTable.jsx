@@ -31,17 +31,12 @@ class UserList extends Component {
                     <p className={classes.usersTable__titleItem}>Телефон</p>
                 </div>
 
+                { !users ? "Загрузка пользователей..." : users.map( user => ( <UserInfo user={user} /> ) ) }
 
-                    {!users ? "Загрузка пользователей..." : users.map(user => (
-                        <NavLink
-                            to={`user?id=${user.id}`}
-                            className={classesUserInfo.user}
-                        >
-                            <div className={classesUserInfo.user__info}>{ user.name }</div>
-                            <div className={classesUserInfo.user__info}>{ user.phone }</div>
-                        </NavLink>
-                    ))
-                    }
+                <div>
+
+                </div>
+
             </div>
         )
     }

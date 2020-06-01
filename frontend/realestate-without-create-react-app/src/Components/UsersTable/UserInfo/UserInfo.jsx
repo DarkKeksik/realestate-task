@@ -6,14 +6,11 @@ import { NavLink } from "react-router-dom";
 let UserInfo = ( props ) => {
     return (
         <NavLink
-            to = {`user?id=${ props.id }`}
-            className = { classes.user }
-            fullname = { props.fullname || "-" }
-            phone = { props.phone || "-" }
-            id = { props.id }
+            to={`user?id=${props.user.id}`}
+            className={classes.user}
         >
-            <div className={ classes.user__info }> { props.fullname || "-" } </div>
-            <div className={ classes.user__info }> { props.phone || "-" } </div>
+            <div className={classes.user__info}>{ props.user.name }</div>
+            <div className={classes.user__info}>{ props.user.phone }</div>
         </NavLink>
     );
 }
